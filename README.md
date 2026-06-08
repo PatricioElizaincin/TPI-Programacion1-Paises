@@ -1,6 +1,6 @@
 # TPI-Programacion1-Paises
 
-# Trabajo Práctico Integrador (TPI) - Programación 1 🚀
+# Trabajo Práctico Integrador (TPI) - Programación 1
 Universidad Tecnológica Nacional (UTN) - Tecnicatura Universitaria en Programación
 
 ## Descripción del Programa

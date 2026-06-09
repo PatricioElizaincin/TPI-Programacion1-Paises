@@ -119,7 +119,41 @@ def buscar_pais(paises):
 # FILTRAR
 # -------------------------
 def filtrar_paises(paises):
-    print("Función en desarrollo por mi compañero...")
+    print("\n--- FILTRAR POR ---")
+    print("1 - Continente")
+    print("2 - Población")
+    print("3 - Superficie")
+    
+    opcion = input("Opción: ")
+
+    if opcion == "1":
+        continente = input("Continente: ").lower().strip()
+        for pais in paises:
+            if pais["continente"].lower() == continente:
+                print(f"{pais['nombre']} - Pob: {pais['poblacion']} - Sup: {pais['superficie']}")
+
+    elif opcion == "2":
+        try:
+            minimo = int(input("Población mínima: "))
+            maximo = int(input("Población máxima: "))
+            for pais in paises:
+                if pais["poblacion"] >= minimo and pais["poblacion"] <= maximo:
+                    print(f"{pais['nombre']} - Pob: {pais['poblacion']}")
+        except ValueError:
+            print("Error: Ingrese valores numéricos.")
+
+    elif opcion == "3":
+        try:
+            minimo = int(input("Superficie mínima: "))
+            maximo = int(input("Superficie máxima: "))
+            for pais in paises:
+                if pais["superficie"] >= minimo and pais["superficie"] <= maximo:
+                    print(f"{pais['nombre']} - Sup: {pais['superficie']}")
+        except ValueError:
+            print("Error: Ingrese valores numéricos.")
+    else:
+        print("Opción inválida")
+
 
 # ORDENAR
 # -------------------------

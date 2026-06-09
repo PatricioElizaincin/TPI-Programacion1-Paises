@@ -158,7 +158,58 @@ def filtrar_paises(paises):
 # ORDENAR
 # -------------------------
 def ordenar_paises(paises):
-    print("Función en desarrollo por mi compañero...")
+    print("\n--- CRITERIO DE ORDENAMIENTO ---")
+    print("1 - Nombre")
+    print("2 - Población")
+    print("3 - Superficie")
+    opcion = input("Opción: ")
+    
+    if opcion not in ["1", "2", "3"]:
+        print("Opción inválida")
+        return
+
+    print("\n--- DIRECCIÓN ---")
+    print("1 - Ascendente (Menor a Mayor / A-Z)")
+    print("2 - Descendente (Mayor a Menor / Z-A)")
+    direccion = input("Opción: ")
+
+    if direccion not in ["1", "2"]:
+        print("Opción inválida")
+        return
+
+
+    for i in range(len(paises)):
+        for j in range(i + 1, len(paises)):
+            intercambiar = False
+
+            if opcion == "1":
+                if direccion == "1" and paises[i]["nombre"] > paises[j]["nombre"]:
+                    intercambiar = True
+                elif direccion == "2" and paises[i]["nombre"] < paises[j]["nombre"]:
+                    intercambiar = True
+            
+            elif opcion == "2":
+                if direccion == "1" and paises[i]["poblacion"] > paises[j]["poblacion"]:
+                    intercambiar = True
+                elif direccion == "2" and paises[i]["poblacion"] < paises[j]["poblacion"]:
+                    intercambiar = True
+            
+            elif opcion == "3":
+                if direccion == "1" and paises[i]["superficie"] > paises[j]["superficie"]:
+                    intercambiar = True
+                elif direccion == "2" and paises[i]["superficie"] < paises[j]["superficie"]:
+                    intercambiar = True
+
+            # Si se cumple la condición, intercambiamos las posiciones
+            if intercambiar:
+                aux = paises[i]
+                paises[i] = paises[j]
+                paises[j] = aux
+
+    print("\nLista ordenada:")
+    for pais in paises:
+        print(f"Nombre: {pais['nombre']}, Pob: {pais['poblacion']}, Sup: {pais['superficie']}")
+
 
 # ESTADÍSTICAS
 # -------------------------

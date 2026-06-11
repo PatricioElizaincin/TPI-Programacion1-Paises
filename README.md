@@ -28,7 +28,7 @@ Ejemplo - Estadísticas:
 
 Integrantes del Equipo
 * Patricio Elizaincin - [Encargado de funciones como cargar, buscar, actualizar]
-* nombre 2 - 
+* Nancy Fernandez - [Encargado de funciones como filtrar, estadisticas, ordenar, menu]
 
  Enlaces Obligatorios
 Video Demostración: 

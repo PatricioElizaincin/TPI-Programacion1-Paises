@@ -31,5 +31,5 @@ Integrantes del Equipo
 * Nancy Fernandez - [Encargado de funciones como filtrar, estadisticas, ordenar, menu]
 
  Enlaces Obligatorios
-Video Demostración: https://www.youtube.com/watch?v=7iuuZGpbgrg
+Video Demostración: https://youtu.be/7iuuZGpbgrg
  Documentación (PDF) adjunto en el repositorio.
